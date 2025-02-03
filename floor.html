@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/hdds_favicon.png"/>
+  <!--패비콘 수정 해야함.-->
+  <!--TODO: -->
+  <title> 판교점 메인 | 현대백화점</title>
+  <style>
+    @import url(css/main.css);
+    @import url(css/floor.css);
+    @import url(css/popup.css);
+  </style>
+</head>
+<body>
+  <header id="header" class="header">
+    <nav class="navi_Util">
+      <div class="containerUtilWrap">
+        <ul class="list_util">
+          <li class="util_app">
+            <a href="https://www.ehyundai.com/app/index.html"> <!--앱 설치 주소 -->
+              <img src="images/icon/ICON_app.png" alt="애플리케이션 다운로드">
+            </a>
+          </li>
+          <li class="util_sitemap">
+            <a href="http://www.ehyundai.com/newPortal/sitemap/SM000001_M.do"> <!--사이트맵 주소-->
+              <img src="images/icon/ICON_sitemap.png" alt="사이트맵">
+            </a>
+          </li>
+          <li class="util_language">
+            <a href="#"> <!--번역 -->
+              <img src="images/icon/ICON_selected_kr.png" alt="번역">
+            </a>
+          </li>
+          <li>
+            <div type="button" class="loginTopBtn" onclick="location.href='login.html'">로그인</div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="navi_MarketService">
+      <div class="container_MarketServiceWrap">
+          <a href="index.html">
+            <img class="logo" src="images/hd_logo.png" alt="더 현대 로고">
+          </a>
+          <ul class="list_MarketService">
+            <li id="li_storeInfo" onmouseover="showDetail('#storeInfo')" onmouseleave="hideDetail('#storeInfo')">지점안내</li>
+            <li id="li_shopInfo" onmouseover="showDetail('#shopping_info')" onmouseleave="hideDetail('#shopping_info')">쇼핑정보</li>
+            <li id="li_cultureLife" onmouseover="showDetail('#cultureLife')" onmouseleave="hideDetail('#cultureLife')">컬쳐앤라이프</li>
+            <li id="li_card" onmouseover="showDetail('#card')" onmouseleave="hideDetail('#card')">카드·상품권·멤버십</li>
+            <li id="li_clientService" onmouseover="showDetail('#clientService')" onmouseleave="hideDetail('#clientService')">고객 서비스</li>
+            <li id="li_ESG" onmouseover="showDetail('#ESG')" onmouseleave="hideDetail('#ESG')">ESG</li>
+          </ul>
+          <div id="searchBtn_container">
+            <button class="roundBtn" type="button" onclick="showBranchDetail('#BranchDetail')"><img src="images/icon/icon-eye.png" alt="눈 아이콘">한 눈에 보이는 지점 정보</button>
+            <button class="searchBtn" type="button"><img src="images/ICON_magnifier_noneBg_white.png" alt="돋보기 아이콘" onclick="showDetail('#searchSection')"></button>
+          </div>
+      </div>
+    </nav>
+    <section id="storeInfo" class="hiddenDetail" onmouseenter="showDetail('#storeInfo')" onmouseleave="hideDetail('#storeInfo')">
+        <div class="detailsTitles">
+            <ul class="listTitle">
+                <li id="list_theHd" onmouseenter="showListDetail('list_theHdItems')">더 현대</li>
+                <li id="list_hdds" onmouseenter="showListDetail('list_hddsItems')" >현대백화점</li>
+                <li id="list_hdol" onmouseenter="showListDetail('list_hdolItems')">현대아울렛</li>
+            </ul>
+        </div>
+        <div class="details">
+            <div id="list_theHdItems">
+                <ul class="listItems">
+                    <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00140000">더 현대 서울</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00146000">더 현대 대구</a></li>
+                </ul>
+            </div>
+            <div id="list_hddsItems">
+                <ul class="listItems">
+                  <li>서울점
+                    <ul>
+                      <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00121000">압구정본점</a></li>
+                      <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00122000">무역센터점</a></li>
+                      <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00126000">천호점</a></li>
+                      <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00127000">신촌점</a></li>
+                      <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00141000">미아점</a></li>
+                      <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00142000">목동점</a></li>
+                    </ul>
+                  </li>
+                  <li>수도권점
+                    <ul>
+                      <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00143000">중동점</a></li>
+                      <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00145000">킨텍스점</a></li>
+                      <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00149000">디큐브시티</a></li>
+                      <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00148000">판교점</a></li>
+                    </ul>
+                  </li>
+                  <li>지방점
+                    <ul>
+                      <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00124000">부산점(준비중)</a></li>
+                      <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00129000">울산점</a></li>
+                      <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00125000">울산동구점</a></li>
+                      <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00147000">충청점</a></li>
+                    </ul>
+                  </li>
+                </ul>
+            </div>
+            <div id="list_hdolItems">
+                <ul class="listItems">
+                    <li><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00172000">김포점</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00174000">송도점</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00177000">대전점</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00178000">SPACE 1</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00173000">동대문점</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00171000">가산점</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00175000">가든파이브점</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00176000">대구점</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id ="shopping_info" class="hiddenDetail"  onmouseenter="showDetail('#shopping_info')"  onmouseleave="hideDetail('#shopping_info')">
+      <div class="detail_infoWrap">
+        <ul class="detail_infoTitles">
+          <li>컨템포러리
+            <ul class="detail_infoDetails">
+              <li><a href="https://www.ehyundai.com/newPortal/shop/FM000001_L.do">FOURM</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/shop/FM000004_V.do">톰그레이하운드</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/shop/FS000001_V.do">PEER</a></li>
+            </ul>
+          </li>
+          <li>해외패션
+            <ul class="detail_infoDetails">
+              <li><a href="https://www.ehyundai.com/newPortal/shop/FS000002_V.do">THE BASH</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/shop/OW000000_L.do">오프웍스</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/shop/FS000003_V.do">LABELS</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/shop/SS000000_L.do">슈페이스</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/shop/SL000000_L.do">슈라이브러리</a></li>
+            </ul>
+          </li>
+          <li>리빙
+            <ul class="detail_infoDetails">
+              <li><a href="https://www.ehyundai.com/newPortal/shop/LV000001_V.do">HBYH</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/shop/WM000000_L.do">위마켓</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/shop/LP000000_L.do">르쁠라 H</a></li>
+            </ul>
+          </li>
+          <li>현대식품관
+            <ul class="detail_infoDetails">
+              <li><a href="https://www.ehyundai.com/newPortal/shop/MM000000_L.do">명인명촌</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/shop/WW000000_L.do">와인웍스</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/shop/OT000000_L.do">원테이블</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="cultureLife" class="hiddenDetail"  onmouseenter="showDetail('#cultureLife')"  onmouseleave="hideDetail('#cultureLife')">
+      <div class="detail_infoWrap">
+        <ul class="detail_infoTitles">
+          <li>CH1985·문화센터
+            <ul class="detail_infoDetails">
+              <li><a href="https://www.ehyundai.com/newCulture/CT/CT000001_M.do">CH 1985</a>
+              <li><a href="https://www.ehyundai.com/newCulture/CT/CT010100_L.do">문화센터</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/member/HD/HD001000_M.do">나의 강의실</a></li>
+              <li><a href="https://www.ehyundai.com/newCulture/CT/CT010300_M.do">이용 안내</a></li>
+              <li><a href="https://www.youtube.com/@thehyundaiculture">공식 유튜브</a></li>
+              <li><a href="https://www.instargram.com/thehyundaiculture/">공식 인스타그램</a></li>
+              <li><a href="https://blog.naver.com/hculturecenter">공식 블로그</a></li>
+            </ul>
+          </li>
+          <li>전시 · 공연
+            <ul class="detail_infoDetails">
+              <li><a href="https://www.ehyundai.com/newCulture/EH/EH000003_L.do">공간 소개</a></li>
+              <li><a href="https://www.ehyundai.com/newCulture/EH/EH000001_L.do?bbsCd=210">진행 중인 전시 · 공연</a></li>
+              <li><a href="https://www.ehyundai.com/newCulture/EH/EH000002_L.do?bbsCd=210">지난 전시 · 공연</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="card" class="hiddenDetail"  onmouseenter="showDetail('#card')" onmouseleave="hideDetail('#card')">
+      <div class="detail_infoWrap">
+        <ul class="detail_infoTitles">
+          <li>현대백화점카드
+            <ul class="detail_infoDetails">
+              <li><a href="https://www.ehyundai.com/newPortal/card/TB/TB000000_M.do">카드 소개 및 혜택</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/card/CA/CA000000_V.do">카드 신청</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/member/HD/HD001000_M.do">나의 백화점카드</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/card/UI/UI000001_L.do">이용 안내</a></li>   
+              <li><a href="https://www.ehyundai.com/newPortal/card/CO/CO000002_V.do">법인카드</a></li>   
+              <li><a href="https://www.ehyundai.com/newPortal/member/HD/HD001000_M.do">웰컴 라운지</a></li>   
+              <li><a href="http://www.ehyundai.com/newPortal/card/MC/MC000030_V.do">공인인증센터</a></li>   
+            </ul>
+          </li>
+          <li>상품권
+            <ul class="detail_infoDetails">
+              <li><a href="https://www.ehyundai.com/newPortal/GC/GC000001_V.do">상품권</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/GC/GC000002_V.do">모바일 교환권</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/GC/GC000003_V.do">구입 안내</a></li>
+            </ul>
+          </li>
+          <li>멤버십
+            <ul class="detail_infoDetails">
+              <li><a href="https://www.ehyundai.com/newPortal/card/HP/HP00001_V.do">H.Point</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/card/WD/main_clubwedding.do">클럽웨딩</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="clientService" class="hiddenDetail"  onmouseenter="showDetail('#clientService')"  onmouseleave="hideDetail('#clientService')">
+      <div class="detail_infoWrap" style="width: 80%;">
+        <ul class="detail_infoTitles">
+          <li>VIP 프로그램
+            <ul class="detail_infoDetails">
+              <li><a href="https://www.ehyundai.com/newPortal/CS/TB000012_V.do">선정기준</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/CS/TB000013_V.do">VIP혜택</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/CS/CS000008_V.do">마일리지 적립</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/CS/CS000009_V.do">리워드</a></li>   
+            </ul>
+          </li>
+          <li>고객서비스
+            <ul class="detail_infoDetails">
+              <li><a href="ClientNoticeBoard.html">고객의의견</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/CS/CS006000_M.do">자주 하는질문</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/CS/CS000004_V.do">서비스안내</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/CS/CS006001_M.do">주요문의처</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/HBSS/main.do">배송조회</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/NS/NS000002_L.do">공지사항</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/VH/VH003000_M.do">행복 인사이트 위원회</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/CS/CS006002_M.do">비대면 결제</a></li>
+            </ul>
+          </li>
+          <li>이벤트
+            <ul class="detail_infoDetails">
+              <li><a href="https://www.ehyundai.com/newPortal/EV/EV000001_L.do">진행 이벤트</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/EV/EV000003_L.do">당첨자 발표</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/EV/EV000005.do?tab=intro">어린이그림그리기대회</a></li>
+            </ul>
+          </li>
+          <li>채널
+            <ul class="detail_infoDetails">
+              <li><a href="https://thehyundaifont.com/">서체 다운로드</a></li>
+              <li><a href="https://www.youtube.com/channel/UCqaSfiTyF72tSdi5TZ-HHmg">유튜브</a></li>
+              <li><a href="https://www.instagram.com/the_hyundai/">인스타그램</a></li>
+              <li><a href="https://thehyundaiblog.com/">블로그</a></li>
+              <li><a href="https://m.post.naver.com/my.nhn?memberNo=46666064">포스트</a></li>
+            </ul>
+          </li>
+          <li>콘텐츠
+            <ul class="detail_infoDetails">
+              <li><a href="https://www.ehyundai.com/newPortal/ST/ST007001_M.do">STYLE매거진</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/ST/TS0000001_L.do">3분쇼핑</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/ST/ED0000001_L.do">애디토리얼</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/ST/GR0000001_L.do">그로서리 가이드</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="ESG" class="hiddenDetail" onmouseenter="showDetail('#ESG')" onmouseleave="hideDetail('#ESG')">
+      <div class="detail_infoWrap">
+        <ul class="detail_infoTitles">
+          <li>ESG경영
+            <ul class="detail_infoDetails">
+              <li><a href="https://www.ehyundai.com/newPortal/RC/ESG00002_V.do?n=1">ESG 경영 체계</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/RC/ENV00001_V.do?n=1">환경</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/RC/CSR00002_V.do?n=1">사회</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/RC/ESG00001_V.do?n=1">ESG 정보공시</a></li>
+              <li><a href="https://www.ehyundai.com/newPortal/RC/RP000001_V.do?n=1">ESG 보고서</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="BranchDetail" class="hiddenBrDetail">
+      <div class="BranchDetailWrap">
+        <ul>
+          <li id="Popuplist_theHd" onclick="showPopupList('Popuplist_theHdItems','Popuplist_theHd')">더 현대</li>
+          <li id="Popuplist_hdds" onclick="showPopupList('Popuplist_hddsItems','Popuplist_hdds')">현대백화점</li>
+          <li id="Popuplist_hdol" onclick="showPopupList('Popuplist_hdolItems','Popuplist_hdol')">현대아울렛</li>
+        </ul>
+        <hr style="color: #ccc;">
+        <div class="PopupDetail">
+          <div id="Popuplist_theHdItems" >
+              <ul id="theHdUl" class="PopuplistItems">
+                  <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00140000">더 현대 서울</a></li>
+                  <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00146000">더 현대 대구</a></li>
+              </ul>
+          </div>
+          <div id="Popuplist_hddsItems" >
+              <ul class="PopuplistItems">
+                <li>서울점
+                  <ul>
+                    <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00121000">압구정본점</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00122000">무역센터점</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00126000">천호점</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00127000">신촌점</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00141000">미아점</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00142000">목동점</a></li>
+                  </ul>
+                </li>
+                <li>수도권점
+                  <ul>
+                    <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00143000">중동점</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00145000">킨텍스점</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00149000">디큐브시티</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00148000">판교점</a></li>
+                  </ul>
+                </li>
+                <li>지방점
+                  <ul>
+                    <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00124000">부산점(준비중)</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00129000">울산점</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00125000">울산동구점</a></li>
+                    <li><a href="https://www.ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00147000">충청점</a></li>
+                  </ul>
+                </li>
+              </ul>
+          </div>
+          <div id="Popuplist_hdolItems" >
+              <ul id="hdolUl" class="PopuplistItems">
+                  <li><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00172000">김포점</a></li>
+                  <li><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00174000">송도점</a></li>
+                  <li><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00177000">대전점</a></li>
+                  <li><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00178000">SPACE 1</a></li>
+                  <li><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00173000">동대문점</a></li>
+                  <li><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00171000">가산점</a></li>
+                  <li><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00175000">가든파이브점</a></li>
+                  <li><a href="https://www.ehyundai.com/newPortal/outlet/DP/DP000000_V.do?branchCd=B00176000">대구점</a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="searchSection" class="hiddenDetail" onmouseleave="hideDetail('#searchSection')">
+      <div>
+        <div id="searchBarWrap">
+          <input id="searchBar_inputArea" type="text" placeholder="검색할 내용을 입력하세요"><button id="searchBtn" type="button">검색</button>
+        </div>
+        <div id="keyword_wrap">
+          <div>
+            <h1>최근 검색어</h1>
+          </div>
+          <div id="rec_keyword">
+            <h1>추천 검색어</h1>
+            <p># 할인정보</p>
+            <p># 현대카드</p>
+          </div> 
+        </div> 
+      </div>
+    </section>
+  </header>
+<div id="wrap">
+  <aside id="holding_MenuArea">
+      <div id="holding_MenuArea_title"><!--지점 타이틀 및 변경 리스트 박스 -->
+        <header> <!--지점 타이틀 버튼 -->
+          <button type="button" class="roundBtn" ><h1 class="text_title">판교점</h1><img src="images/icon/icon-fly.png" alt="위치 아이콘"></button>
+        </header>
+        <footer><!--지점 박스-->
+        </footer>
+      </div>
+      <div id="holding_MenuArea_list"><!-- 지점 정보 , 층별안내...etc 리스트-->
+        <ul>
+          <li onclick="location.href='index.html'">지점정보</li>
+          <li onclick="location.href='floor.html'" class="roundBtn_lime" >층별 안내<span style="float: right;">></span></li>
+          <li onclick="location.href='news.html'">행사 안내</li>
+          <li onclick="location.href='amenity.html'">편의시설</li>
+          <li onclick="location.href='fnb.html'">F&B</li>
+        </ul>
+      </div>
+      <div id="holding_MenuArea_weather"> <!-- 날씨 안내 영역-->
+      </div>
+  </aside>
+  <div id="fixRoundTopbutton" onclick="location.href='#'"><p class="titlefont" style="font-size:25px; color: white;">TOP</p></div>
+<!----------------------------------------------------------기본 틀 END ----------------------------------->
+  <section id="contents_container">
+    <header id="contents_imgHeader"> <!-- 지점 이미지 -->
+      <img id="mainImg" src="images/hdds2.jpg" alt="지점 이미지">
+    </header>
+    <section>
+      <iframe style="width: 100% ; height: 1600px; background-color: white;" src="https://www.ehyundai.com/newPortal/DP/FG/FG000000_V.do?branchCd=B00148000">
+      </iframe>
+    </section>
+  </section>
+<!------------------------------------------------------------기본틀 end ---------------------------------------------------------->
+</div>
+
+<footer id="footer_Container">
+  <div class="container_MarketServiceWrap footer_MarginBottom">
+    <a href="https://www.ehyundai.com/gate.do">
+      <img class="logo" src="images/hd_logo_white.png" alt="더 현대 로고 흰색">
+    </a>
+    <ul class="list_MarketService" style="margin-left: 50px;">
+      <li><a href="https://www.thehyundai.com/gate.html" class="footer_link">더현대닷컴</a></li>
+      <li><a href="https://www.hmall.com/pd/dpl/tvMainR?mainDispSeq=3" class="footer_link">현대Hmall</a></li>
+      <li><a href="https://tohome.thehyundai.com/front/dp/dpa/dawnHome.do?utm_source=ehyundai&utm_medium=family&utm_content=%ED%8C%A8%EB%B0%80%EB%A6%AC%EB%B0%94%EB%A1%9C%EA%B0%80%EA%B8%B0&deepLink=Y" class="footer_link">투홈</a></li>
+      <li><a href="https://mall.hyundailivart.co.kr/index" class="footer_link">현대리바트몰</a></li>
+      <li><a href="https://www.hmoka.org/main/index.do" class="footer_link">현대어린이책미술관</a></li>
+    </ul>
+    <div id="familySite_container">
+      <!--TODO: onclick 추가-->
+      <button type="button" class="roundBtn" style="border:1px solid white; padding:10px 20px;" onclick="showPopup()"><span style="font-size: x-large;">FamilySite&nbsp&nbsp&nbsp&nbsp+</span></button>
+      <div id="fcontainerWrap">
+        <div id="fcontainer">
+          <h1>Family Site</h1>
+          <hr>
+          <ul>
+            <li><a href="https://www.ehyundai.com/newPortal/group/MAIN.do" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '현대백화점그룹');">현대백화점그룹</a></li>
+            <li><a href="https://www.ehyundai.com/newPortal/index.do" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '현대백화점');">현대백화점</a></li>
+            <li><a href="https://www.hyundaihmall.com/" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '현대홈쇼핑');">현대홈쇼핑</a></li>
+            <li><a href="https://www.hyundaigreenfood.com/" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '현대그린푸드');">현대그린푸드</a></li>
+            <li><a href="http://www.hyundaicatering.co.kr/" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '현대캐터링시스템');">현대캐터링시스템</a></li>
+            <li><a href="http://www.cnsfoodsystem.co.kr/" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', 'C&S푸드시스템');">C&amp;S푸드시스템</a></li>
+            <li><a href="https://www.handsome.co.kr/ko/main.do" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '한섬');">한섬</a></li>
+            <li><a href="https://www.hyundailivart.co.kr/" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '현대리바트');">현대리바트</a></li>
+            <li><a href="http://www.hyundailnc.com/" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '현대L&C');">현대L&amp;C</a></li>
+            <li><a href="https://www.hddfs.com/" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '현대면세점');">현대면세점</a></li>
+            <li><a href="http://home.hyundaidreamtour.com" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '현대드림투어');">현대드림투어</a></li>
+            <li><a href="http://www.hyundairentalcare.co.kr/" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '현대렌탈케어');">현대렌탈케어</a></li>
+            <li><a href="https://www.hyundaifuturenet.co.kr/" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '현대퓨처넷');">현대퓨처넷</a></li>
+            <li><a href="http://www.everdigm.com/" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '에버다임');">에버다임</a></li>
+            <li><a href="http://www.hyundai-ite.com/" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '현대IT&E');">현대IT&amp;E</a></li>
+            <li><a href="http://www.hyundaibioland.co.kr/" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '현대바이오랜드');">현대바이오랜드</a></li>
+            <li><a href="https://www.ezwel.com" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '현대이지웰');">현대이지웰</a></li>
+            <li><a href="http://www.dwku.com/" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '대원강업');">대원강업</a></li>
+            <li><a href="https://sikdae.com" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '벤디스(식권대장)');">벤디스(식권대장)</a></li>
+            <li><a href="http://www.ehyundai.com/newPortal/sc/main/main.do" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '현대백화점그룹 사회복지재단');">현대백화점그룹<br>사회복지재단</a></li>
+            <li><a href="https://partners.ehyundai.com/ghh/" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '상품본부');">상품본부</a></li>
+            <li><a href="https://withus2.ehyundai.com/ " target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '협력사원 커뮤니티');">협력사원 커뮤니티</a></li>
+            <li><a href="https://tohome.thehyundai.com/front/goToHome.do?tc=218_0000000071_0000372906" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '현대식품관 투홈');">현대식품관 투홈</a></li>
+            <li><a href="http://www.hyundaigfholdings.co.kr/" target="_blank" title="새창열림" onclick="GA_Event('PC_공통', '패밀리사이트', '현대지에프홀딩스');">현대지에프홀딩스</a></li>
+          </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+  <section id="footer_TableContainer"><!-- 회사 소개 및 etc-->
+    <table id="footer_TableWarp" class="tb_topBottom">
+      <tr>
+        <td class="tb_right">
+          <table>
+            <tr>
+              <td><a href="https://www.ehyundai.com/newPortal/group/MAIN.do">현대백화점 그룹</a></td>
+              <td><a href="http://www.ehyundai.com/newPortal/member/HD/HD004000_M.do">이용약관</a></td>
+              <td><a href="https://www.ehyundai.com/newPortal/CS/CS006001_M.do">주요문의처</a></td>
+              <td><a href="http://www.ehyundai.com/newPortal/sitemap/SM000001_M.do">사이트맵</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://www.ehyundai.com/newPortal/member/HD/HD005000_M.do" style="color: white; font-weight: bold; text-decoration: none;">개인정보처리방침</a></td>
+              <td><a href="https://www.ehyundai.com/newPortal/FN/FN000013.do">공고사항</a></td>
+              <td><a href="https://www.ehyundai.com/newPortal/group/MAIN.do">윤리경영</a></td>
+              <td><a href="https://www.ehyundai.com/newPortal/sc/main/main.do">사회공헌</a></td>
+            </tr>
+          </table>
+        </td>
+
+        <td class="tb_right">
+        </td>
+
+        <td>
+          <table id="footer_IconTable">
+            <tr>
+              <td><a href="https://www.instagram.com/the_hyundai/"><img src="images/icon/free-icon-instagram-1400829.png" alt="인스타그램"></a></td>
+              <td><a href="https://www.youtube.com/channel/UCqaSfiTyF72tSdi5TZ-HHmg"><img src="images/icon/free-icon-youtube-3938035.png" alt="유튜브"></a></td>
+              <td><a href="https://www.facebook.com/eHYUNDAI"><img src="images/icon/free-icon-facebook-3536423.png" alt="페이스북"></a></td>
+              <td><a href="https://thehyundaiblog.com/"><img src="images/icon/free-icon-blogger-4494512.png" alt="블로그"></a></td>
+              <td><a href="https://m.post.naver.com/my.nhn?memberNo=46666064"><img src="images/icon/free-icon-letter-p-3665962.png" alt="포스트"></a></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </section>
+  <div id="footer_TextContainer">
+    <p>주식회사 현대백화점 대표이사 : 정지영 외 1인
+      사업자등록번호 : 211-87-21455 사업자등록확인
+      통신판매업 신고 : 강남-01882</p>
+    <p>개인정보관리책임 : 회원운영관리담당 박근호
+      서울시 강남구 테헤란로 98길 12
+      현대백화점 대표전화 : 02. 549. 2233</p>
+    <p>© Hyundai Department Store. All rights reserved.</p>
+  </div>
+</footer>
+<script src="js/footerPopup.js"></script>
+  <script src="js/headerNavi.js"></script>
+  <script src="js/headerScroll.js"></script>
+  <script src="js/menuarea.js"></script>
+</body>
+</html>

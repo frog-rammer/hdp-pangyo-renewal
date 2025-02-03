@@ -1,0 +1,50 @@
+#fcontainerWrap{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+#fcontainer{
+  position: absolute;
+  bottom: 323px;
+  right: 350px;
+  width: 800px;
+  border-radius: 40px;
+  margin: 10% auto;
+  z-index: -10;
+  border: 1px solid #ccc;
+  background-color: white;
+  display: none;
+}
+#fcontainer.popup{
+  z-index: 2000;
+  display: block;
+}
+#fcontainer >h1{
+  width: fit-content;
+  margin: 30px auto;
+}
+#fcontainer >ul{
+  display: flex;
+  width: 90%;
+  margin: 30px auto;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap:20px;
+}
+#fcontainer >ul li{
+  padding: 5px 10px;
+  border: 1px solid#333;
+  border-radius: 10px;
+}
+
+#fcontainer >ul li a{
+  text-decoration: none;
+  font-weight: bolder;
+  color:#333;
+}
+#fcontainer >ul li:hover{
+  background-color: #333;
+}
+#fcontainer >ul li:hover a{
+  color: white;
+}

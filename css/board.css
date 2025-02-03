@@ -1,0 +1,118 @@
+#NoticeBoardWrap{
+  margin: 0 auto;
+  width: 80%;
+}
+#content_wrap{
+  margin-bottom: 30%;
+}
+#titleArea{
+  padding: 10% 5%;
+}
+#titleArea h1, #titleArea p{
+  margin: 0 auto;
+  width: fit-content;
+}
+#titleArea h1{
+  font-size: 40px;
+  font-weight: bolder;
+}
+#titleArea p{
+  padding-top: 15px;
+}
+.flexBtnCon{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  gap: 5px;
+}
+.flexBtnCon >button{
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bolder;
+  background-color: white;
+  border: 1px solid black;
+}
+#searSection{
+  width: 100%;
+  min-width: 1400px;
+  margin: 0 auto;
+}
+#searSection input{
+  width: 15%;
+  font-size: 16px;
+  padding: 10px 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+#prevCal ,#curCal{
+  background-color: rgb(203, 234, 246);
+}
+#boardSelect{
+  font-size: 16px;
+  padding: 10px 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+#searBtn{
+  font-size: 16px;
+  width: 5%;
+  margin-left: 5px;
+  padding: 10px 5px;
+  color: white;
+  border-radius: 5px;
+  background-color: black;
+}
+#boardArea{
+  width: 100%;
+  min-width: 1400px;
+}
+#boardTable{
+  margin-top: 15px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  width: 100%;
+}
+#boardTable tr th, #boardTable tr td{
+  padding: 10px 0;
+}
+#boardTable tr:first-child{
+  background-color: rgb(203, 234, 246);
+}
+
+/*테이블 영역 크기 지정 및 서식*/
+#boardTable tr th:nth-child(1),
+#boardTable tr td:nth-child(1){
+  width: 10%;
+}
+#boardTable tr th:nth-child(2),
+#boardTable tr td:nth-child(2){
+  width: 40%;
+  font-weight: bolder;
+}
+#boardTable tr th:nth-child(3),
+#boardTable tr td:nth-child(3){
+  width: 10%;
+}
+#boardTable tr th:nth-child(4),
+#boardTable tr td:nth-child(4){
+  width: 10%;
+}
+#boardTable tr th:nth-child(5),
+#boardTable tr td:nth-child(5){
+  width: 20%;
+}
+#boardTable tr th:nth-child(6),
+#boardTable tr td:nth-child(6){
+  width: 10%;
+}
+
+#writeBtn{
+  float: right;
+  font-size: large;
+  font-weight: bolder;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: white;
+}
